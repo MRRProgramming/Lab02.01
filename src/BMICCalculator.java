@@ -55,7 +55,6 @@ public class BMICCalculator {
                 // no negative values
 
                 extractedHeight = matcher.group();
-                System.out.println("Extracted height: " + extractedHeight);
                 feet = Integer.parseInt(extractedHeight.substring(0, extractedHeight.indexOf("'")));
                 inches = Integer.parseInt(extractedHeight.substring(extractedHeight.indexOf("'") + 1,extractedHeight.length()-1));
                 // invalid ranges:
@@ -85,7 +84,6 @@ public class BMICCalculator {
                 System.out.println("Invalid input - Weight format is incorrect");
             }
         }
-        System.out.println(pounds);
         System.out.println("Your BMI, expressed as weight(kg)/height(m)^2: "+ df.format(computeBMI(inches, pounds)) +" kg/m^2");
     }
 }
